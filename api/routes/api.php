@@ -12,5 +12,6 @@
 */
 
 Route::group(['namespace' => 'Api', 'prefix' => 'api'], function(){
-	
+	Route::any('/home', ['as'=> 'api_home','uses' => 'SiteController@index']);
+	Route::any('/list', ['as'=> 'api_home','uses' => 'SiteController@getList']);
 });
